@@ -14402,6 +14402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\prado\\OneDrive\\Área de Trabalho\\LOGICA PROGRAMACAO\\Eplayers_Aspnetcore\\Eplayers_aspnetcor\\Views\\Equipe\\Index.cshtml",
+      "TargetPath": "Views\\Equipe\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\prado\\OneDrive\\Área de Trabalho\\LOGICA PROGRAMACAO\\Eplayers_Aspnetcore\\Eplayers_aspnetcor\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
