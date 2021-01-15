@@ -9,7 +9,7 @@ namespace Eplayers_aspnetcor.Controllers
     {
         Equipe equipeModel = new Equipe();
 
-
+      [Route("Listar")]
 
         public IActionResult Index(){
 
@@ -17,6 +17,8 @@ namespace Eplayers_aspnetcor.Controllers
             ViewBag.equipes = equipeModel.ReadAll();
             return View();
         }
+
+          [Route("Cadastrar")]
 
         public IActionResult Cadastrar(IFormCollection form){
 
