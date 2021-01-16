@@ -31,7 +31,7 @@ namespace Eplayers_aspnetcor.Controllers
             ViewBag.equipes = equipeModel.ReadAll();
 
             //Redirecionar para a mesma página onde estamos. ~ indica root, raiz.
-            return LocalRedirect("~/Equipe");
+            return LocalRedirect("~/Equipe/Listar");
         }
 
 
