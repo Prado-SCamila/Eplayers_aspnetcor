@@ -9,6 +9,10 @@ namespace Eplayers_aspnetcor.Models
 
         public int IdEquipe {get;set;}
 
+        public string Email {get;set;}
+
+        public string senha {get;set;}
+
     }
 }
 

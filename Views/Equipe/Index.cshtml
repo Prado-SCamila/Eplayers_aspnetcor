@@ -1,21 +1,34 @@
 @model Equipe
-
+ 
 @{
-    ViewData ["title"] = "Equipe";
+    ViewData ["Title"] = "Equipes";
+  
+}
+    <div class="titulo_pagina">
+        <h1>Cadastro de @ViewData["Title"]</h1>
+    </div>
 
-    //criar um formulário para aparecer na página - enctype é pra aceitar arquivos no formulário
-    <form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+        <form class="cadastro" method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+        <div class="campo">
 
-        <label>ID</label>
-        <input type="text" name ="IdEquipe"/>
+        <label for="IdEquipe">IdEquipe</label>
+        <input type="text" name ="IdEquipe" id="IdEquipe"/>
 
-        <label>Nome</label>
-        <input type="text" name ="Nome"/>
+        </div>
+        <div class="campo">
 
-        <label>Imagem</label>
-         <input type="file" name ="Imagem"/>
+        <label for="Nome">Nome</label>
+        <input type="text" name ="Nome" id="Nome"/>
+
+        </div>
+        <div class="campo">
+
+        <label for="Imagem">Imagem</label>
+         <input type="file" name ="Imagem" id="Imagem"/>
+
+        </div>
         
-        <button type="submit">Cadastrar</button>
+        <button class="gradient btn" type="submit">Cadastrar</button>
     </form>
 
     <table class="table table-striped table-responsive">
@@ -36,4 +49,3 @@
             }
         </tbody>
     </table>
-}
