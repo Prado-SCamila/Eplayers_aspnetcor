@@ -3,8 +3,8 @@
 @{
     ViewData ["title"] = "Equipe";
 
-    //criar um formulário para aparecer na página
-    <form method="POST" action='@Url.Action("Cadastrar")'>
+    //criar um formulário para aparecer na página - enctype é pra aceitar arquivos no formulário
+    <form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
 
         <label>ID</label>
         <input type="text" name ="IdEquipe"/>
@@ -13,7 +13,7 @@
         <input type="text" name ="Nome"/>
 
         <label>Imagem</label>
-         <input type="text" name ="Imagem"/>
+         <input type="file" name ="Imagem"/>
         
         <button type="submit">Cadastrar</button>
     </form>
@@ -30,7 +30,8 @@
                 <tr>
                     <td>@equipe.IdEquipe</td>
                     <td>@equipe.Nome</td>
-                    <td>@equipe.Imagem</td>
+                    <td><img src="/img/Equipes/@equipe.Imagem" alt="Imagem da Equipe.Nome"></td>
+                    <td><a asp-area="Link para excluir uma equipe" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">Excluir</a></td>
                 </tr>
             }
         </tbody>
