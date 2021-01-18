@@ -66,6 +66,9 @@ ul{
     align-items: center;
     font-size: 23px;
 }
+.erro{
+    color: #fc1e8b;
+  }
 .btn{
     color: white;
     text-decoration: none;
@@ -76,6 +79,9 @@ ul{
 
 .banner .btn{
     margin-top: 230px;
+}
+.banner a{
+    margin: 0 20px;
 }
 
 .sobre{

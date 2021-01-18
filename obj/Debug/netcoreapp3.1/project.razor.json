@@ -14422,6 +14422,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\prado\\OneDrive\\Área de Trabalho\\LOGICA PROGRAMACAO\\Eplayers_Aspnetcore\\Eplayers_aspnetcor\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\prado\\OneDrive\\Área de Trabalho\\LOGICA PROGRAMACAO\\Eplayers_Aspnetcore\\Eplayers_aspnetcor\\Views\\Jogador\\Index.cshtml",
+      "TargetPath": "Views\\Jogador\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\prado\\OneDrive\\Área de Trabalho\\LOGICA PROGRAMACAO\\Eplayers_Aspnetcore\\Eplayers_aspnetcor\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

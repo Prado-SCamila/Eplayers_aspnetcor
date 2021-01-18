@@ -21,7 +21,7 @@
                 </a>
 
                 <a asp-area="" asp-controller="Home" asp-action="Index"></a>
-                    <img src="Images/Logo.svg" alt="Logo do site E-Players">
+                    <img src="~/Images/Logo.svg" alt="Logo do site E-Players">
                 </a>
             </div>
             <nav id="menu">
@@ -30,16 +30,26 @@
                     <li><a href="#horarios" title="Ir até a sessão de horários das partidas">HORÁRIOS</a></li>
                     <li><a href="#resultados" title="Ir até a sessão de resultados das partidas">RESULTADOS</a></li>
                     <li><a href="#noticias" title="Ir até a sessão de notícias">NOTÍCIAS</a></li>
+                    if(ViewBag.UserName != null){
+                        <li style="color:#d5379b;">Olá, @ViewBag.UserName</li>
+                        <li>
+                            <li><a asp-controller="Login" asp-action="Logout" title="Deslogar na aplicação">LOGIN</a></li>
+                        </li>
+                    }else{
+                         <li><a asp-controller="Login" asp-action="Index" title="Logar na aplicação">LOGIN</a></li>
+                    }
+                    
                     <li><a href="#" title="buscar conteudo no site"><i class="fas fa-search"></i></a></li>
+                   
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container">
+    
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    
 
      <footer>
         <div class="container">
@@ -57,7 +67,7 @@
                 </nav>
             </div>
             <div class="mob_logo_sociais">
-                <img src="Images/Logo.svg" alt="Logo do projeto E-Players">
+                <img src="~/Images/Logo.svg" alt="Logo do projeto E-Players">
                 <div class="sociais">
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-instagram-square"></i>
@@ -80,5 +90,13 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+    @if(ViewBag.UserName != null)
+{
+    <li style="color: #d5379b">Olá @ViewBag.UserName!</li>
+    <li><a asp-controller="Login" asp-action="Logout" title="voltar para a página inicial">SAIR</a></li>
+}else{
+
+    <li><a asp-controller="Login" asp-action="Index" title="voltar para a página inicial">LOGIN</a></li>
+}
 </body>
 </html>
