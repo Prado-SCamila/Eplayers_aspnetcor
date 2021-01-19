@@ -22,7 +22,7 @@ namespace Eplayers_aspnetcor.Controllers
             ViewBag.Jogadores = jogadorModel.ReadAll();
             return View();
         }
-
+        [Route("Cadastrar")] // inseri a rota cadastrar
         public IActionResult Cadastrar(IFormCollection form){
 
             Jogador novoJogador = new Jogador();

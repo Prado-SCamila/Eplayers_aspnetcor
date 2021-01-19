@@ -18,11 +18,23 @@
             <label>ID Equipe</label>
             <select name="IdEquipe" id="IdEquipe">
                 <option value="0">Selecione uma opção...</option>
+                <option value ="1">Equipe A</option>
+                <option value="2">Equipe B</option>
+                <option value="3">Equipe C</option>
+                <option value="3">Equipe D</option>
+                <option value="3">Equipe E</option>
+                <option value="3">Equipe F</option>
+                
                 @foreach(var item in ViewBag.Equipes){
 
                     <option value="@item.IdEquipe"></option>
                 }
             </select>         
+        </div>
+
+        <div class="campo">
+        <label>Nome</label>
+        <input type="text" name="Nome" />
         </div>
 
          <div class="campo">

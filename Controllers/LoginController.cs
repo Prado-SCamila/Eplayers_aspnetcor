@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 using System.Collections.Generic;
 using Eplayers_aspnetcor.Models;
 using Microsoft.AspNetCore.Http;
@@ -37,10 +37,11 @@ namespace Eplayers_aspnetcor.Controllers
             //criamos a sessão com os dados do usuário
             HttpContext.Session.SetString("_Username",logado.Split(";")[1]);//nno índice 1 está o nome
             return LocalRedirect("~/");
-        }
+        }else{
 
         Mensagem = "dados incorretos, tentar novamente...";
             return LocalRedirect("~/");// volta para a Home
+        }
         }
         [Route("Logout")]
         public IActionResult Logout(){
